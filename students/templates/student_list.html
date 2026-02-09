@@ -1,8 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+
     <title>Students List</title>
 </head>
 <body>
@@ -19,11 +23,15 @@
             <td>{{ student.course }}</td>
             <td>
                 <a href="{% url 'student_detail' student.id %}">View </a>
-                <a href="{% url 'student_update' student.id %}">Edit</a>
+                
             </td>
         </tr>
         {% endfor %}
     </table>
+<div class="add-container">
+    <a href="#" class="add-btn">+ Add Student</a>
+</div>
+
 
 </body>
 </html>
