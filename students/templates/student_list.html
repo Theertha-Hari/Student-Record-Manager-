@@ -23,6 +23,8 @@
             <td>{{ student.course }}</td>
             <td>
                 <a href="{% url 'student_detail' student.id %}">View </a>
+                <a href="{% url 'student_update' student.id %}">Edit</a>
+
                 
             </td>
         </tr>
