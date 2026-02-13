@@ -3,16 +3,15 @@
 <html>
     <link rel="stylesheet" href="{% static 'students/style.css' %}">
 <head>
-    <title>Edit Student</title>
+    <title>Add Student</title>
 </head>
 <body>
-    <h1>Edit Student</h1>
+    <h1>Add Student</h1>
 
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-
-        <button type="submit">Update</button>
+        <button type="submit">Add Student</button>
     </form>
 
     <br>

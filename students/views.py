@@ -19,3 +19,13 @@ def student_update(request,id):
     else:
         form=StudentForm(instance=student)
     return render(request,'student_update.html',{'form':form,'student':student})
+
+def student_add(request):
+    if request.method == 'POST':
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            student = form.save()  
+    else:
+        form = StudentForm()
+
+    return render(request, 'student_add.html', {'form': form})
