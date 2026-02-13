@@ -18,4 +18,4 @@ def student_update(request,id):
             form.save()
     else:
         form=StudentForm(instance=student)
-    return render(request,'student_form.html',{'form':form,'student':student})
+    return render(request,'student_update.html',{'form':form,'student':student})
